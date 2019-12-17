@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">online Shopping app</string>
+    <string name="slogan">you can find ay thing here</string>
+    <string name="navigation_drawer_open">Open Navigation drawer</string>
+    <string name="navigation_drawer_close">close Navigation drawer</string>
+</resources>

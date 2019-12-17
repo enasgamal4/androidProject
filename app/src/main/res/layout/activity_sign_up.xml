@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/register"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtFullName"
+            android:hint="Full Name"
+            android:textColorHint="@android:color/black"
+            android:text="Ahmad Muhammad Sayed"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+        />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtUserName"
+            android:hint="User Name"
+            android:textColorHint="@android:color/black"
+            android:text="ahmedsaptan"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+        />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtEmail"
+            android:hint="Email"
+            android:textColorHint="@android:color/black"
+            android:text="ahmedsaptan@gmail.com"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+        />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPassword"
+            android:hint="Password"
+            android:textColorHint="@android:color/black"
+            android:text="ahmed12345"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+        />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPassword2"
+            android:hint="Password2"
+            android:textColorHint="@android:color/black"
+            android:text="ahmed12345"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+        />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPhone"
+            android:hint="Phone Number"
+            android:textColorHint="@android:color/black"
+            android:text="01125833362"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@android:color/black"
+        android:id="@+id/btnSignUp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentBottom="true"
+
+        />
+</RelativeLayout>
