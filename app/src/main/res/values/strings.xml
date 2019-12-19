@@ -3,4 +3,5 @@
     <string name="slogan">you can find ay thing here</string>
     <string name="navigation_drawer_open">Open Navigation drawer</string>
     <string name="navigation_drawer_close">close Navigation drawer</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -4,8 +4,12 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:textSize="50dp"
+        android:id="@+id/totalAmount"
+        android:background="@color/fbutton_color_green_sea"
         android:text="products"/>
+
 </RelativeLayout>

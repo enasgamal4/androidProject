@@ -1,4 +1,4 @@
-package com.example.onlineshoppingapp;
+package com.example.onlineshoppingapp.Model;
 
 public class CardItem {
     private String title;

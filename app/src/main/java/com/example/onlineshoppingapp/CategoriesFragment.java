@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.onlineshoppingapp.Model.CardItem;
+
 import java.util.ArrayList;
 
 public class CategoriesFragment extends Fragment {

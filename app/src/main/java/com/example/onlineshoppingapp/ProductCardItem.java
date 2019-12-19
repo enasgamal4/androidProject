@@ -1,26 +1,39 @@
 package com.example.onlineshoppingapp;
 
 public class ProductCardItem {
-    private String title;
+    private String productTitle;
     private int image;
     private String price;
+    private String Catid;
 
-
-    public ProductCardItem(String title, int image, String price) {
-        this.title = title;
+    public ProductCardItem(String productTitle, int image, String price, String catid) {
+        this.productTitle = productTitle;
         this.image = image;
         this.price = price;
+        Catid = catid;
     }
 
     public ProductCardItem() {
     }
 
-    public String getTitle() {
-        return title;
+    public ProductCardItem(String productTitle, String price, String catid) {
+        this.productTitle = productTitle;
+        this.price = price;
+        Catid = catid;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public ProductCardItem(String productTitle, int image, String price) {
+        this.productTitle = productTitle;
+        this.image = image;
+        this.price = price;
+    }
+
+    public String getProductTitle() {
+        return productTitle;
+    }
+
+    public void setProductTitle(String productTitle) {
+        this.productTitle = productTitle;
     }
 
     public int getImage() {
@@ -37,5 +50,13 @@ public class ProductCardItem {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getCatid() {
+        return Catid;
+    }
+
+    public void setCatid(String catid) {
+        Catid = catid;
     }
 }

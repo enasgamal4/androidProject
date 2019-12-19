@@ -5,6 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
+import com.example.onlineshoppingapp.Common.Common;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -12,7 +17,9 @@ public class Electric_devices extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    RecyclerView.Adapter adapter;
+    ProductAdapter adapter;
+
+    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +27,7 @@ public class Electric_devices extends AppCompatActivity {
         setContentView(R.layout.activity_electric_devices);
 
 
-        ArrayList<ProductCardItem> cards = new ArrayList<>();
+        final ArrayList<ProductCardItem> cards = new ArrayList<>();
         cards.add(new ProductCardItem("تلفزيون اتش دي ال اي دي 32 بوصة من جاك 32N، لوحة IPS - اسود", R.drawable.el1, "1500.5 EG"));
         cards.add(new ProductCardItem("لاب توب لينوفو ليجيون للالعاب Y530، شاشة فل اتش دي 15.6 بوصة اي بي اس بإضاءة خلفية، انتل كور i7-8750H، 16 جيجابايت رام، 1 تيرابايت و256 جيجابايت اس اس دي، معالج رسومات نفيديا جي فورسGTX 1060 6 جيجابايت GDDR5، دوس", R.drawable.el2, "19900 EG"));
         cards.add(new ProductCardItem("نوت بوك ديل Xps 15-9570، انتل كور I7-8750H، شاشة 15.6 بوصة يو اتش دي، 32 جيجابايت، 1 تيرابايت اس اس دي، جي تي اكس 4 جيجا، ويندوز 10 برو - أسود", R.drawable.el3, "44000 EG"));
@@ -38,5 +45,20 @@ public class Electric_devices extends AppCompatActivity {
 
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new ProductAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                ProductCardItem p = cards.get(position);
+                if(Common.FirstOrder) {
+                    dbRef.child("Orders").setValue(Common.currentUser.phone);
+                    Common.FirstOrder = false;
+                }
+
+                dbRef.child("Orders").child(Common.currentUser.phone).child("products").push().setValue(p);
+                Toast.makeText(Electric_devices.this, "Added", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 }
